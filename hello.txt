@@ -1,3 +1,9 @@
 This is the content created first in dev branch.
 After that this will be pushed to main branch
 "This is the Second Assignment"
+"--------------------------------------------"
+Jenkins Assignment: Output Content of hello.txt to Jenkins Logs
+
+Objective:
+
+Create a Jenkins pipeline to read and output the content of a hello.txt file in your Git repository to Jenkins logs when code is pushed to the main branch.
