@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/mdsalekul/Ostad-Project1.git'
+            }
+        }
+        
+        stage('Read hello.txt') {
+            steps {
+                sh 'echo "Printing the content of hello.txt File:"'
+                sh 'cat hello.txt'
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline execution failed!'
+        }
+    }
+}
